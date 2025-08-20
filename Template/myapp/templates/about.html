@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   {#<h1>{{title | lower}}</h1> comments template#} 
+
+    <h1>Text Formating</h1>
+
+<p>{{word | capfirst}}</p>
+<h6>{{sentence | upper}}</h6>
+<h6>{{word |cut:'W'}}</h6>
+<h6>{{sentence | title|truncatewords:4 }}</h6>
+<h6>{{sentence | title|truncatechars:4 }}</h6>
+
+<hr>
+
+<h1>Number Filtering</h1>
+<h6>{{number | floatformat:1 }}</h6>
+<h6>{{number | add:100 }}</h6>
+<h6>{{9 | divisibleby:3}}</h6>
+<hr>
+<h1>List Formating</h1>
+
+<h6>{{ my_list | length}}</h6>
+<h6>{{ my_list | first}}</h6>
+<h6>{{ my_list | last}}</h6>
+<h6>{{ my_list |join:","}}</h6>
+<h6>{{ my_list |slice:":3"}}</h6>
+
+</body>
+</html>
