@@ -1,0 +1,64 @@
+
+Text Format
+- Capetilize
+- Uppercase
+- Lowercase
+- Word Count
+- Title Case
+- Cut characters
+- Truncate characters
+- Turncate words
+
+Number Filter
+- Float Format
+- Add
+- Divisible
+
+
+List Filter
+-Length
+-First
+-Last
+-join
+-slice
+
+
+Date and time Filter
+- day 
+- formating
+- 
+
+
+
+Escape Filter
+-Js
+-HTML
+-Force escape
+
+Conditional Filter
+- default
+- default_if_none
+
+Dictionary Filter
+- Sort Dictionary
+- Sort Reverse
+
+
+Template tag
+- If else
+- for loop
+- with
+- include
+- comment
+- verbatim
+- autoescape off
+- cycle 
+- csrf_token
+- Debug
+- Include with
+
+
+
+
+
+

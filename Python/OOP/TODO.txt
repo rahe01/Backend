@@ -1,0 +1,34 @@
+1.What is Object Oriented Programming (OOP)
+
+2. Key concept of OOP
+
+        -Class
+        -Object
+        -Attribute
+        -Method
+        -Inheritance
+        - Encapsulation
+        -Polymorphism
+
+3. OOP use cae
+        - Django
+        - Reusable
+        - Extensibility
+        - Flexibility
+        - Testing , Debugging
+        - Clead Code , Better Structure
+        - Database Operations
+        - Security, Access Control
+
+
+
+4. Why ,How , What is Class
+        - What is class 
+        - How to create class
+        - What inside class
+        - Class variable
+        - Class Method/Function
+
+
+5. Why ,How , What is Object
+

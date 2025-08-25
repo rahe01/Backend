@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+   
+
+    <h1>If example</h1>
+
+    {% if user.is_authenticated%}
+    <h6>Welcome {{ user.username }}</h6>
+    {% else %}
+    <h6>Please login to access your account</h6>
+    {% endif %}
+
+    <h1>Loop example</h1>
+    <ul>
+      {%for item in products%}
+      <li>Name: {{item.name}}. Price: {{item.price}}</li>
+
+      {% endfor %}
+    </ul>
+
+    <h1>With tag example</h1>
+
+    {%with total_product=products|length%}
+
+    <p>Total product is : {{total_product|add:1000000}}</p>
+
+
+    {% endwith %}
+
+    <h1>Include Example</h1>
+
+    {%include 'subview1.html'%}
+    {%include 'subview2.html'%}
+
+    <h1>Comment example</h1>
+
+    {%comment%}
+    <h1>Loop example</h1>
+    <ul>
+      {%for item in products%}
+      <li>Name: {{item.name}}. Price: {{item.price}}</li>
+
+      {% endfor %}
+    </ul>
+    {% endcomment %}
+
+
+
+    <h1>Verbatim example</h1>
+
+    {%verbatim%}
+    <h1>{{title}}</h1>
+    
+    {%endverbatim%}
+
+    <h1>Autoescape example</h1>
+
+    {% autoescape off %}
+
+    <h1>Rahat ahmed rahe</h1>
+    <h1>{{title}}</h1>
+
+
+    {% endautoescape %}
+
+
+    <h1>Cycle Example</h1>
+
+    <ul>
+
+      {%for item in products%}
+      <li style="color:{%cycle 'red' 'blue' 'green' 'gray' 'black'%}">Name : {{item.name}}</li>
+
+      {%endfor%}
+
+    </ul>
+
+
+    <form action="" method="post">
+      {% csrf_token %}
+      <input type="text" name="name" />
+      <input type="submit" value="Submit" />
+
+
+
+
+    </form>
+
+    <h1>dubug example</h1>
+    {%comment%}
+    {%debug %}
+    {%endcomment%}
+
+
+    <h1>Include child view with data</h1>
+
+    {%include 'subview3.html' with userData=user%}
+    {%include 'subview4.html' with userData=title%}
+
+
+
+  </body>
+</html>

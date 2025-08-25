@@ -31,5 +31,47 @@
 <h6>{{ my_list |join:","}}</h6>
 <h6>{{ my_list |slice:":3"}}</h6>
 
+<hr>
+
+
+
+<h1>Date and Time Filter</h1>
+
+<h6>{{my_date}}</h6>
+<h6>{{my_date | date:"d-m-y"}}</h6>
+<h6>{{my_date | timeuntil}}</h6>
+<h6>{{my_date}}</h6>
+<hr>
+
+
+
+<h1>Escape Filter</h1>
+<h6>{{my_string | escapejs}}</h6>
+
+<h6>{{my_html | escape}}</h6>
+<h6>{{my_html | force_escape}}</h6>
+<h6>{{my_html | safe}}</h6>
+<hr>
+
+
+
+<h1>Conditional Filter</h1>
+
+<h6>{{my_var| default:"No Value Provided"}}</h6>
+<h6>{{my_var| default_if_none:"None is Provided"}}</h6>
+<h6>{{is_bangla | yesno:"Yes,No,Maybe"}}</h6>
+
+<hr>
+
+
+
+<h1>Dictionary Filter</h1>
+<h6>{{my_dict |dictsort:'age'}}</h6>
+<h6>{{my_dict |dictsortreversed:'age'}}</h6>
+
+
+
+
+
 </body>
 </html>
