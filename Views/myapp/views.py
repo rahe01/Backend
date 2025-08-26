@@ -83,5 +83,5 @@ def demo8(request):
 
 # - With RESPONSE cookies
 def demo9(request):
-    pass
+    return HttpResponse("This is a response with cookies.")
 
