@@ -72,8 +72,15 @@ def demo5(request):
 
 
 # Multipart from data upload
+@csrf_exempt
 def demo6(request):
-    return HttpResponse("Demo6")
+    if request.method == 'POST':
+       uploaded_file = request.FILES.get('myfile')
+       with open(f"uploads/{uploaded_file.name}" , "wb" ) as myFile:
+           for EachChunk in uploaded_file.chunks():
+               myFile.write(EachChunk)
+       return HttpResponse("File uploaded successfully")          
+    
 
 
 
