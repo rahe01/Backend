@@ -2,6 +2,9 @@ from django.shortcuts import render
 
 from django.http import HttpResponse, JsonResponse, HttpResponseNotFound , HttpResponseRedirect
 
+import os
+from config import settings
+
 # Create your views here.
 
 # - Simple plain text RESPONSE
@@ -85,14 +88,27 @@ def demo8(request):
 def demo9(request):
     
     response = HttpResponse("This is a response with cookies.")
-    response.set_cookie(
-        "demo9_cookie",
-        "cookie_value_123",
-        max_age=3600,  # Cookie expires in 1 hour
-        httponly=True,
-        secure=True,  # Set to True if using HTTPS
-        
-    )
+    response.set_cookie("demo9_cookie","cookie_value_123",max_age=3600, httponly=True, secure=True, )
+    response.set_cookie("demo9_cookie1","cookie_value_123",max_age=3600, httponly=False, secure=True, )
+    response.set_cookie("demo9_cookie331","cookie_value_123",max_age=3600, httponly=True, secure=False, )
+ 
     
     return response
 
+
+
+def demo10(request):
+    # file path
+    file_path = os.path.join(settings.BASE_DIR,"uploads/12118.pdf")
+    
+    # file name
+    file_name = os.path.basename(file_path)
+    
+    # open the file in binary mode
+    with open(file_path, "rb") as myfile:
+        response =HttpResponse(myfile.read() , content_type="application/ocet-stream")
+        
+        response['content-Disposition'] = f'attachment; filename="{file_name}"'        
+    
+    
+    return response

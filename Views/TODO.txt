@@ -15,4 +15,10 @@ RESPONSE - DETAILS in view
 - With RESPONSE cookies (name , vale) (domain=defult , path="/" , Expires="max_age=3600" )
 
 - File download RESPONSE
+
+
+
+
+
+
 - File binary RESPONSE
