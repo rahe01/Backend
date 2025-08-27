@@ -1,0 +1,10 @@
+REQUEST - DETAILS in view
+
+
+- Method GET , PUT , POST , PATCH, DELETE
+- Method with URL Query string
+- Method with request header
+- Method POST with request body JSON
+- Method POST with request From Data
+- Multipart from data upload
+- Catch request Cookies 
