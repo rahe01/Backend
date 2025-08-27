@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse , JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+import json
 
 # Create your views here.
 
@@ -41,19 +42,31 @@ def demo2(request):
 
 # Method with request header
 def demo3(request):
-    return HttpResponse("Demo3") 
+    token1 = request.headers.get("token")
+    return HttpResponse(token1) 
 
    
 
+
 # Method POST with request body JSON
+@csrf_exempt
 def demo4(request):
-    return HttpResponse("Demo4")
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        return HttpResponse(data['name'])
+        
+ 
 
 
 
 # Method POST with request From Data
+@csrf_exempt
 def demo5(request):
-    return HttpResponse("Demo5")
+    if request.method == 'POST':
+        data =request.POST.dict()
+        return JsonResponse(data)
+        
+        
 
 
 
