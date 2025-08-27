@@ -83,5 +83,16 @@ def demo8(request):
 
 # - With RESPONSE cookies
 def demo9(request):
-    return HttpResponse("This is a response with cookies.")
+    
+    response = HttpResponse("This is a response with cookies.")
+    response.set_cookie(
+        "demo9_cookie",
+        "cookie_value_123",
+        max_age=3600,  # Cookie expires in 1 hour
+        httponly=True,
+        secure=True,  # Set to True if using HTTPS
+        
+    )
+    
+    return response
 
