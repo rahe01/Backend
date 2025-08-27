@@ -112,3 +112,20 @@ def demo10(request):
     
     
     return response
+
+
+
+def demo11(request):
+     # file path
+    file_path = os.path.join(settings.BASE_DIR,"uploads/12118.pdf")
+    
+    # file name
+    file_name = os.path.basename(file_path)
+    
+    with open(file_path, "rb") as myfile: 
+        response =HttpResponse(myfile.read() , content_type="application/pdf")
+        response['content-Disposition'] = f'inline;'
+        
+    
+    
+    return response

@@ -15,4 +15,5 @@ urlpatterns = [
     path('demo9/', views.demo9),
     
     path('demo10/', views.demo10),
+    path('demo11/', views.demo11),
 ]
