@@ -1,0 +1,12 @@
+
+
+
+
+
+Modify Model-Migration-Database Table
+
+- Add new column
+- Change column name
+- Change column data type
+- Remove column
+- Change Model name Table name
