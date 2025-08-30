@@ -75,11 +75,16 @@ def demo5(request):
 @csrf_exempt
 def demo6(request):
     if request.method == 'POST':
+        
+        
        uploaded_file = request.FILES.get('myfile')
-       with open(f"uploads/{uploaded_file.name}" , "wb" ) as myFile:
+       if uploaded_file:
+        with open(f"uploads/{uploaded_file.name}" , "wb" ) as myFile:
            for EachChunk in uploaded_file.chunks():
                myFile.write(EachChunk)
-       return HttpResponse("File uploaded successfully")          
+        return HttpResponse("File uploaded successfully")          
+    else:
+            return HttpResponse("No file uploaded")
     
 
 
@@ -87,4 +92,6 @@ def demo6(request):
 
 # Catch request Cookies
 def demo7(request):
-    return HttpResponse("Demo7")
+    cookies= request.COOKIES
+    ck1=cookies.get("Cookie_1" , 'No Cookie')
+    return HttpResponse(ck1)
