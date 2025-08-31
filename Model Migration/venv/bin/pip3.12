@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/rahe01/Python/Backend/Model Migration/venv/bin/python3" "$0" "$@"
+'''exec' "/home/rahe01/Backend/Model Migration/venv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
