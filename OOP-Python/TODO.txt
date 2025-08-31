@@ -71,3 +71,9 @@
 9. Inheritance Method in class
 
         - Function that operate with Instance variable
+
+
+10. ML -> Optical Character Recognition
+         - eye and ear
+         - Image processing
+         - Pillow 
