@@ -1,0 +1,73 @@
+1. What is Object Oriented Programming (OOP)
+
+2. Key concepts of OOP
+
+        - Class
+        - Object
+        - Attribute
+        - Method
+        - Inheritance
+        - Encapsulation
+        - Polymorphism
+
+
+
+
+3. OOP Use case
+
+        - Django
+        - Reusable Coding
+        - Extensibility
+        - Flexibility
+        - Testing , Debugging
+        - Clean code , Better Structure
+        - Database Opertaions
+        - Security
+        - Access Control
+        
+4. Why , How What is class?
+
+        - What is class
+        - How to create a class
+        - What inside class
+        - class variable 
+        - class Method/ Function
+        -  
+
+5. Why , How What is Object?
+
+        -class >-- Object
+        - Object variable
+        - How to access class variable using Object
+        - How to access class Method using Object
+
+
+6. Why , How What is Constructor?
+
+        - Constructor is a Method
+        - Constructor has self keyword
+        - Constructor can't return
+        - Constructor executed auto when Object created
+
+        6.1 Constructor Use
+
+            - Database connection
+            - Email SMTP
+            - Sms Fire
+            - delete , coustomer auto message
+            - Restrict a class without required values
+
+
+
+7. Class Method params & Constructor params
+
+
+8. Instance variable in class
+
+        - Jodi Constructor er maddhome kono variable create hoy
+
+
+
+9. Inheritance Method in class
+
+        - Function that operate with Instance variable
