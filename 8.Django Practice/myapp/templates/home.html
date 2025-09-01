@@ -6,9 +6,35 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>dksfjskdf</h1>
-    <p>dlfjsldf</p>
-    dfklsdjf
+    <h1>My name is {{name|add:"-CHECK"}}</h1>
+
+    {%for x in fruits%}
+
+    <h1>{{x|add:"-CHECK"}}</h1>
+
+    {%endfor%}
+
     
+    {% for i in price  %}
+      <h1>Price is {{i|add:80}}</h1>
+    {% endfor %}
+
+
+    <h1>{{title|addslashes}}</h1>
+
+    <button onclick="alert('{{title|addslashes}}')">Click</button>
+      
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>
