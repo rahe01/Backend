@@ -7,7 +7,7 @@ def Home(request):
 
     data ={
         "name" : "Rahat Ahmed",
-        "title": "django Filter's",
+        "title": "django <i> Filter's </i>",
         "Product": [
             {"name" : "apple" , "price" : 5000} 
         ],
@@ -19,7 +19,9 @@ def Home(request):
       {'brand': 'Volvo', 'model': 'XC90', 'year': 2022},
       {'brand': 'Volvo', 'model': 'P1800', 'year': 1962},
       {'brand': 'Ford', 'model': 'Focus', 'year': 2004},
-    ]
+    ],
+    "total":10,
+    'heading': 'Hello &lt;i>my&lt;/i> World!',
 
     }
 

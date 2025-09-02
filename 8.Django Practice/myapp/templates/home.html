@@ -26,7 +26,26 @@
     <h1>{{des|default:"Rahe"}}</h1>
     <h1>{{des|default_if_none:"Rahe"}}</h1>
 
+    {% for i in cars|dictsortreversed:"year" %}
+    <h3>{{i.year}}</h3>
+    <p>{{i.brand}}</p>
+    <p>{{i.model}}</p>
+    {% endfor %}
+
+
+    <h1>{{total|divisibleby:3}}</h1>
     
+    {% autoescape off %}
+      <h2>{{heading}}</h2>
+       <h2>{{title}}</h2>
+    {% endautoescape %}
+   
+    
+
+
+
+
+
 
 
 
