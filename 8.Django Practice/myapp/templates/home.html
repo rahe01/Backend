@@ -12,32 +12,21 @@
 
     <h1>{{x|add:"-CHECK"}}</h1>
 
-    {%endfor%}
-
-    
-    {% for i in price  %}
-      <h1>Price is {{i|add:80}}</h1>
+    {%endfor%} {% for i in price %}
+    <h1>Price is {{i|add:80}}</h1>
     {% endfor %}
-
 
     <h1>{{title|addslashes}}</h1>
 
     <button onclick="alert('{{title|addslashes}}')">Click</button>
 
-    <textarea name="" id="" style="width:800px">{{name|center:50}}</textarea>
+    <textarea name="" id="" style="width: 800px">{{name|center:50}}</textarea>
     <h1>{{name|cut:"A"}}</h1>
     <h1>{{name|date}}</h1>
+    <h1>{{des|default:"Rahe"}}</h1>
+    <h1>{{des|default_if_none:"Rahe"}}</h1>
 
-
-      
-
-
-
-
-
-
-
-
+    
 
 
 
