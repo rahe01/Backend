@@ -22,6 +22,7 @@ def Home(request):
     ],
     "total":10,
     'heading': 'Hello &lt;i>my&lt;/i> World!',
+    "file":1024,
 
     }
 
