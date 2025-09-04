@@ -5,5 +5,6 @@ from . import views
 
 urlpatterns = [
     path('' , views.home),
-    path('app1/' , views.myapp1 )
+    path('django' , views.learn_django)
+    
 ]
