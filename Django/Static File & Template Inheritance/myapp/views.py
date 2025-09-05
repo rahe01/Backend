@@ -22,21 +22,9 @@ def home(request):
 # Example-1.2: Variable
 
 def learn_django(req):
+    
 
-    name ='Django'
-    duration ='$mounth'
-    seats = 10
-
-    course={
-        'name' :name,
-        'duration': duration,
-        'seats': seats
-    }
-
-
-
-
-    return render(req, 'django.html' , course)
+    return render(req, 'django.html')
 
 
 

@@ -1,20 +1,19 @@
+
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <h1>Django templates</h1>
+    <h1>Django templates with static file</h1>
    
-    {% comment %} Example 1 variavle {% endcomment %} 
-    <h1>{{name}}</h1>
-
-
-    <h3>{{name}}</h3>
-    <h3>{{duration}}</h3>
-    <h3>{{seats}}</h3>
+  
+    <img src="{%static 'myapp/images/pic1.jpg'%}" alt="" style="width: 400px;">
+    <img src="{% get_static_prefix %}myapp/images/pic1.jpg" alt="" style="width: 300px;">
 
 
 
@@ -27,16 +26,13 @@
 
 
 
+    <button type='button' value='click me' onclick='disp()'> Click me</button>
 
 
 
 
 
 
-
-
-
-
-
+<script src="{%static 'myapp/js/scripts.js'%}"></script>
 </body>
 </html>
