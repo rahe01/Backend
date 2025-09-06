@@ -14,12 +14,17 @@
   </head>
   <body>
     <ul>
-      <li>Home</li>
-      <li>Django</li>
-      <li>Python</li>
+      <li> <a href="/">Home</a></li>
+       <li> <a href="/course/dj">Django</a></li>
+        <li> <a href="/course/py">Python</a></li>
+     
     </ul>
+<hr>
+     {% include 'core/components/navbar.html' %}
+      
     <h1>{% block content %} {% endblock content %}</h1>
 
+    {% block hero %}{% endblock hero %}
 
     
     {% block footer %}

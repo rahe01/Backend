@@ -10,14 +10,17 @@
 
 
 {% block title %}
-    Django page
+    Django page 
 {% endblock title %}
 
 
+{% block hero %}
+{% include 'core/components/hero.html' with name='moon' %}
 
+{% endblock hero %}
 
 {% block content %}
-    Django Page
+    Django Page {{name}}
 {% endblock content %}
 
 

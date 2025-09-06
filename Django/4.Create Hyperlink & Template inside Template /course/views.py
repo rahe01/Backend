@@ -6,7 +6,7 @@ from django.http import HttpResponse
 
 def django(req):
 
-    return render(req, 'course/django.html')
+    return render(req, 'course/django.html' , {'name':'rahe'})
 
 
 def pythonn(req):
