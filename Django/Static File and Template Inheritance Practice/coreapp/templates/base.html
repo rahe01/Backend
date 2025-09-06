@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% block corecss %}
+    <link rel="stylesheet" href="{%static 'coreapp/css/style.css'%}" />
+    {% endblock corecss %}
+
+    <title>{% block title %} {% endblock title %}</title>
+  </head>
+  <body>
+    <ul>
+      <li>Home</li>
+      <li>Sub View 1</li>
+      <li>Sub View 2</li>
+    </ul>
+
+    <h1>{% block content %} {% endblock content %}</h1>
+
+    {% block footer %} 
+    This is footer
+    
+    {% endblock footer %}
+  </body>
+</html>

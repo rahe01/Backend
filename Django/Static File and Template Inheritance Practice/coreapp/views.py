@@ -5,5 +5,5 @@ from django.http import HttpResponse
 
 def home(req):
 
-    return HttpResponse("Hello world from core app")
+    return render(req, 'home.html')
 

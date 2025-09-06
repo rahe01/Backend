@@ -5,5 +5,5 @@ from django.http import HttpResponse
 
 def subhome(req):
 
-    return HttpResponse("Hello world from sub app")
+    return render(req, 'sub1.html')
 
