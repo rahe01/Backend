@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registation page</h1>
+
+    {% comment %} <form action="">
+       Name: {{form.f_name}} <br>
+       Name: {{form.l_name}} <br>
+       Email: {{form.email}}
+
+    </form>
+
+    <form action="">
+      {{form.f_name.label_tag}} {{form.f_name}} <br>
+
+    </form>
+
+       <form action="">
+      <label for="{{form.f_name.id_for_label}}"></label>{{form.f_name}} <br>
+      
+    </form>
+
+
+     </form>
+
+       <form action="">
+      <label for="{{form.f_name.id_for_label}}">{{form.f_name.label}}</label>{{form.f_name}} <br>
+      
+    </form>
+
+
+ {% endcomment %}
+{% comment %} 
+  </form>
+
+       <form action="">
+      <label for="{{form.f_name.id_for_label}}">{{form.f_name.label}}</label><input type="text" name="{{form.f_name.name}}" required id="{{form.f_name.id_for_label}}">
+
+       <label for="{{form.f_name.id_for_label}}">{{form.l_name.label}}</label>{{form.f_name}} <br>
+      
+    </form>
+
+ {% endcomment %}
+
+
+  {% comment %} <div>
+    {{form.f_name.label}}
+    {{form.f_name.value}}
+    {{form.f_name.html_name}}
+    {{form.f_name.field.required}}
+    {{form.f_name.help_text}}
+  </div>
+ {% endcomment %}
+
+
+ <form action="">
+    
+    {% for field in form  %}
+
+    {% comment %} {{field.label_tag}}
+    {{field}} {% endcomment %}
+
+    <label for="{{field.id_for_label}}">{{field.label}}</label>
+
+    <input type="{{field.field.widget.input_type}}" name="{{field.name}}" required id="{{field.id_for_label}}">
+        
+    {% endfor %}
+        
+ </form>
+
+
+
+
+
+
+</body>
+</html>
