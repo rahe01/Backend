@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Regi</h1>
 
-   
-   {%for field in form%}
+    {% comment %} {%for field in form%}
     <div>
-        {{field.label_tag}}{{field}} <span style="color:red">
-            {{field.errors|striptags}}
-        </span>
+      {{field.label_tag}}{{field}}
+      <span style="color: red"> {{field.errors|striptags}} </span>
     </div>
 
+    {% endfor %}
+    <input type="submit" name="" value="submit" id="" /> {% endcomment %}
 
+    <form
+      action="
+    "
+    >
+    {% csrf_token %}
+    {{form.non_field_errors}}
 
-   {% endfor %}
-       <input type="submit" name="" value="submit" id="">
-</body>
+      {%for field in form%}
+      <div>
+        {{field.label_tag}}{{field}} {% for error in field.errors %}
+
+        <span style="color: red"> {{error}} {% endfor %} </span>
+      </div>
+
+      {% endfor %}
+      <input type="submit" name="" value="submit" id="" />
+    </form>
+  </body>
 </html>
