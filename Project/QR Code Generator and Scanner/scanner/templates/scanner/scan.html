@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+{% block title %}Scan OR{% endblock title %}
+{% block content %}
+
+
+
+<div class="center-container">
+    <div class="container">
+        <h1>Scan OR Code</h1>
+
+        <form action="{% url 'scan_qr' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <input type="text" name="monile_number" placeholder="Enter 11-digit mobile number" required pattern= "\d{10}" id="">
+             <input type="file" name="qr_image" accept="image/*" id="qr-input">
+
+             <button type="submit">Scan</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock content %}
