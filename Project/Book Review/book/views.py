@@ -12,5 +12,11 @@ def home(request):
 
 
 def addBook(request):
-    form = BookForm()
+    if request.method == 'POST':
+        form = BookForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return render(request, 'book/home.html')
+    else:
+        form = BookForm()
     return render(request, 'book/addform.html' , {'form': form})

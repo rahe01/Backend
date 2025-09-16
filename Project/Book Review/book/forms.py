@@ -25,10 +25,11 @@ class BookForm(ModelForm):
     isbn = forms.CharField(
         max_length=13,
         validators=[RegexValidator(regex='^\d{10}(\d{3})?$', message='ISBN must be 10 or 13 digits')],
-        widget=forms.TextInput(attrs={'class': 'border rounded px-3 py-2 w-full', 'placeholder': 'ISBN Number'})
+        widget=forms.TextInput(attrs={'class': 'border rounded px-3 py-2 w-full', 'placeholder': 'ISBN Number'} ),
+        
     )
     pages = forms.IntegerField(
-        widget=forms.NumberInput(attrs={'class': 'border rounded px-3 py-2 w-full', 'placeholder': 'Number of Pages'})
+        widget=forms.NumberInput(attrs={'class': 'border rounded px-3 py-2 w-full'})
     )
     cover_image = forms.FileField(
         required=False,
