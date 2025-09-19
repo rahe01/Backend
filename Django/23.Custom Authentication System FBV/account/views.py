@@ -1,5 +1,5 @@
 from django.shortcuts import render , redirect
-from account.forms import RegistationForm
+from account.forms import RegistationForm , PasswordResetForm
 from django.contrib import messages
 from django.conf import settings
 from django.utils.http import urlsafe_base64_decode , urlsafe_base64_encode
@@ -105,7 +105,23 @@ def account_activate(req, uidb64, token):
 
 
 def password_reset(req):
-    return render(req, 'account/password_reset.html')
+    if req.method == 'POST':
+        form = PasswordResetForm(req.POST)
+        if form.is_vailid():
+            email = form.cleaned_data.get('email')
+            user = User.objects.filter(email=email).first()
+            if user:
+                 uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
+                 token = default_token_generator.make_token(user)
+                 reset_url = reverse('password_reset_confirm', kwargs={'uidb64': uidb64, 'token': token})
+                 activation_link = f'{settings.SITE_URL}{reset_url}'
+
+                 send_activation_email(user.email, activation_link)
+
+
+    else:
+        form = PasswordResetForm()
+    return render(req, 'account/password_reset.html', {'form':form})
 
 
 def password_reset_confirm(req, uidb64, token):

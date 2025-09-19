@@ -42,7 +42,8 @@ INSTALLED_APPS = [
      'django_browser_reload',
     'account',
     'customer',
-    'seller'
+    'seller',
+    'core'
 ]
 TAILWIND_APP_NAME = 'theme'
 MIDDLEWARE = [
@@ -145,3 +146,4 @@ EMAIL_HOST_PASSWORD = '540a1c1c794a1cc8376d03f17ebf9263'
 EMAIL_PORT = '587'
 
 LOGOUT_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
