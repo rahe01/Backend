@@ -3,8 +3,13 @@ from account.models import User
 
 
 class RegistationForm (forms.ModelForm):
+    ROLE_CHOICES = (
+        ('seller' , 'Seller'),
+        ('customer' , 'Customer')
+    )
     password = forms.CharField(widget=forms.PasswordInput)
     confirm_password = forms.CharField(widget=forms.PasswordInput)
+    role = forms.ChoiceField(choices=ROLE_CHOICES , widget=forms.Select)
 
     class Meta:
         model = User

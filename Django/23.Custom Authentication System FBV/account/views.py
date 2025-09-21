@@ -62,6 +62,14 @@ def register(req):
             user = form.save(commit=False)
             user.set_password(form.cleaned_data['password'])
             user.is_active = False
+            if form.cleaned_data['role'] == 'seller':
+                user.is_seller = True
+                user.is_customer = False
+            else:
+                user.is_customer = True
+                user.is_seller = False
+
+            
             user.save()
 
             uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
