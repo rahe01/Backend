@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+.errorlist {
+    color: #ef4444; /* Tailwind red-500 */
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+    list-style-type: disc;
+    font-size: 0.875rem;
+}

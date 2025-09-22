@@ -1,3 +1,22 @@
 {% extends "book/base.html" %}
+{% block title %}Home{% endblock title %}
 
-<h1 class=''></h1>
+
+
+
+
+{% block content %}
+   
+   <div class="hero bg-orange-200 h-screen flex items-center justify-center ">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">Hello there</h1>
+      <p class="py-6">
+        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.
+      </p>
+      <a href="{% url 'books' %}"><button class="btn bg-rose-400">Brouse Our Books</button></a>
+    </div>
+  </div>
+</div>
+{% endblock %}
