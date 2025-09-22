@@ -1,0 +1,17 @@
+{% extends "account/base.html" %}
+
+{% block title %}Product{% endblock title %}
+
+{% block content %}
+
+<h1 class="text-center mt-6 font-bold">Product list</h1>
+
+<p>are you sure to delete {{product.name}}</p>
+<form action="" method="post">
+    {% csrf_token %}
+
+    <button type="submit">confirm</button>
+</form>
+
+
+{% endblock content %}

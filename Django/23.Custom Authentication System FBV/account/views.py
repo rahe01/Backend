@@ -9,7 +9,9 @@ from django.urls import reverse
 from account.utils import send_activation_email
 from account.models import User
 from django.contrib.auth import authenticate, login as auth_login
-# Create your views here.
+from core.utils import assign_permissions
+
+
 
 
 def home(req):
@@ -62,6 +64,7 @@ def register(req):
             user = form.save(commit=False)
             user.set_password(form.cleaned_data['password'])
             user.is_active = False
+            role = req.POST.get("role")
             if form.cleaned_data['role'] == 'seller':
                 user.is_seller = True
                 user.is_customer = False
@@ -71,6 +74,7 @@ def register(req):
 
             
             user.save()
+            assign_permissions(user , role)
 
             uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
             token = default_token_generator.make_token(user)
@@ -79,7 +83,7 @@ def register(req):
 
             send_activation_email(user.email, activation_link)
             messages.success(req, "Registration successful! Please check your email to activate your account.")
-            return redirect('login')  # <-- ei line add korbe
+            return redirect('login')  
     else:
         form = RegistationForm()
     return render(req, 'account/register.html', {'form': form})

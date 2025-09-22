@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'account',
     'customer',
     'seller',
-    'core'
+    'core',
+    'product'
 ]
 TAILWIND_APP_NAME = 'theme'
 MIDDLEWARE = [

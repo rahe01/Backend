@@ -12,8 +12,9 @@ class UserModelAdmin(UserAdmin):
     fieldsets =[
         ("User Credentials" , {"fields": ["email" , "password"]}),
         ("Personal Info" , {"fields": ["name"]}),
-        ("Permissions" , {"fields": ["is_active" , "is_staff" , "is_superuser" , "is_customer" , "is_seller" ]}),
+        ("Permissions" , {"fields": ["is_active" , "is_staff" , "is_superuser" , "is_customer" , "is_seller" , "groups","user_permissions" ]}),
         ("Important Dates" , {"fields": ["last_login"]}),
+        
     ]
 
     add_fieldsets = [
@@ -24,6 +25,6 @@ class UserModelAdmin(UserAdmin):
     ]
     search_fields = ["email"]
     ordering = ["email" , "id"]
-    filter_horizontal = []
+    filter_horizontal = ["groups","user_permissions"]
 
    

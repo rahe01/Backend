@@ -1,0 +1,17 @@
+{% extends "account/base.html" %}
+
+{% block title %}Product{% endblock title %}
+
+{% block content %}
+
+<h1 class="text-center mt-6 font-bold">Product</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{form.as_p}}
+    <button type="submit">save</button>
+</form>
+
+
+{% endblock content %}
