@@ -7,5 +7,6 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('add/', views.addBook, name='addform'),
     path('books/', views.books, name='books'),
+    path('books/<int:id>/', views.bookDetail, name='bookdetail'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

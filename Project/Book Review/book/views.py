@@ -29,3 +29,7 @@ def books(request):
     all_books = Book.objects.all()
 
     return render(request, 'book/books.html' , {'books': all_books})
+
+def bookDetail(request, id):
+    book = Book.objects.get(id=id)
+    return render(request, 'book/bookdetail.html' , {'book': book})
