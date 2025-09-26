@@ -33,3 +33,7 @@ def books(request):
 def bookDetail(request, id):
     book = Book.objects.get(id=id)
     return render(request, 'book/bookdetail.html' , {'book': book})
+
+def bookDelete(request, id):
+    book = Book.objects.get(id=id)
+    book.delete()
