@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Session in template</h1>
+    
+    {% for key in keys  %}
+        <p>Key: {{ key }}</p>
+    {% endfor %}
+    
+    {% for item in items %}
+        <p>Item: {{ item.0 }} - Value: {{ item.1 }}</p>
+        
+    {% endfor %}
+        
+</body>
+</html>
