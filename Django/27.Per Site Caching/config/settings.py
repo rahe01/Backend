@@ -125,10 +125,30 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CACHE_MIDDLEWARE_SECONDS = 30  # Cache duration in seconds
-# Caching configuration for per-site caching
+# Caching configuration for per-site cachin
+
+#Database Caching
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+#         'LOCATION': 'student-cache',
+       
+#     }
+# }
+
+# file-based caching
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+#         'LOCATION': 'student-cache',
+       
+#     }
+# }
+
+# In-memory caching
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
         'LOCATION': 'student-cache',
        
     }
