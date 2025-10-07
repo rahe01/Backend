@@ -12,4 +12,4 @@ def course(request):
 
 def result(request):
     return render(request, 'student/result.html')
-    tffdffdg
+   
